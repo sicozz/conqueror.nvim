@@ -388,7 +388,7 @@ local function get_groups()
     TelescopePromptBorder = { link = "TelescopeNormal" },
     TelescopeResultsBorder = { link = "TelescopeNormal" },
     TelescopePreviewBorder = { link = "TelescopeNormal" },
-    TelescopeMatching = { link = "ConquerorBlue" },
+    TelescopeMatching = { link = "ConquerorYellow" },
     TelescopePromptPrefix = { link = "ConquerorRed" },
     TelescopePrompt = { link = "TelescopeNormal" },
     CmpItemAbbr = { link = "ConquerorFg0" },
