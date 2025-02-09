@@ -186,6 +186,7 @@ local function get_groups()
     ConquerorPurpleUnderline = { undercurl = config.undercurl, sp = colors.purple },
     ConquerorAquaUnderline = { undercurl = config.undercurl, sp = colors.aqua },
     ConquerorOrangeUnderline = { undercurl = config.undercurl, sp = colors.orange },
+	ConquerorOcurrenceSelection = { bg = colors.bg2 },
 
     --
     Normal = config.transparent_mode and { fg = colors.fg0, bg = nil } or { fg = colors.fg0, bg = colors.bg0 },
@@ -297,9 +298,9 @@ local function get_groups()
     DiagnosticVirtualTextInfo = { link = "ConquerorBlue" },
     DiagnosticVirtualTextHint = { link = "ConquerorAqua" },
     DiagnosticOk = { link = "ConquerorGreenSign" },
-    -- LspReferenceRead = { link = "ConquerorYellowBold" },
-    -- LspReferenceText = { link = "ConquerorYellowBold" },
-    -- LspReferenceWrite = { link = "ConquerorOrangeBold" },
+    LspReferenceRead = { link = "ConquerorOcurrenceSelection" },
+    LspReferenceText = { link = "ConquerorOcurrenceSelection" },
+    LspReferenceWrite = { link = "ConquerorYellowBold" },
     LspCodeLens = { link = "ConquerorGray" },
     LspSignatureActiveParameter = { link = "Search" },
     gitcommitSelectedFile = { link = "ConquerorGreen" },
