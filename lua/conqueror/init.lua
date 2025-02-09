@@ -139,7 +139,7 @@ local function get_groups()
   local groups = {
     -- definition
     ConquerorFg0 = { fg = colors.fg0 },
-    ConquerorFg1 = { fg = colors.fg1 },
+    ConquerorFg1 = { fg = colors.yellow },
     ConquerorFg2 = { fg = colors.fg2 },
     ConquerorFg3 = { fg = colors.fg3 },
     ConquerorFg4 = { fg = colors.fg4 },
@@ -253,7 +253,7 @@ local function get_groups()
     Macro = { link = "ConquerorRedBold" },
     PreCondit = { link = "ConquerorLightGray" },
     Constant = { link = "ConquerorYellow" },
-    Character = { link = "ConquerorYellowBold" },
+    Character = { link = "ConquerorFg2" },
     String = { fg = colors.fg2, italic = config.italic.strings },
     Boolean = { link = "ConquerorAqua" },
     Number = { link = "ConquerorAqua" },
