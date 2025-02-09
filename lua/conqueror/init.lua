@@ -163,7 +163,7 @@ local function get_groups()
     ConquerorAqua = { fg = colors.aqua },
     ConquerorNeutralAqua = { fg = colors.neutral_aqua },
     ConquerorAquaBold = { fg = colors.aqua, bold = config.bold },
-    ConquerorOrange = { fg = 'ff0000' },
+    ConquerorOrange = { fg = colors.purple },
     ConquerorOrangeBold = { fg = colors.orange, bold = config.bold },
     ConquerorRedSign = config.transparent_mode and { fg = colors.red, reverse = config.invert_signs }
         or { fg = colors.red, bg = colors.bg0, reverse = config.invert_signs },
