@@ -1025,7 +1025,7 @@ Neofusion.load = function()
     vim.cmd.hi("clear")
   end
 
-  vim.g.colors_name = "neofusion"
+  vim.g.colors_name = "conqueror"
   vim.o.termguicolors = true
 
   local groups = get_groups()
