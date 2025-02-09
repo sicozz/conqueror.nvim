@@ -4,7 +4,7 @@ return {
   dark2 = "#003b2d",
   dark3 = "#004e3d",
   dark4 = "#00624c",
-  light0 = "#d8fff6",
+  light0 = "#fbfbfb",
   light1 = "#00ffc5",
   light2 = "#00d8a7",
   light3 = "#00b188",
@@ -36,5 +36,5 @@ return {
   light_green = "#d8ffe3",
   dark_aqua = "#002222",
   light_aqua = "#d2ffff",
-  gray = "#c6c6c6",
+  gray = "#a7a7a7",
 }
