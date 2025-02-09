@@ -233,7 +233,7 @@ local function get_groups()
     vCursor = { link = "Cursor" },
     iCursor = { link = "Cursor" },
     lCursor = { link = "Cursor" },
-    Special = { fg = colors.purple },
+    Special = { link = "ConquerorFg0" },
     Comment = { fg = colors.gray, italic = config.italic.comments },
     Todo = { fg = colors.bg0, bg = colors.blue, bold = config.bold, italic = config.italic.comments },
     Done = { fg = colors.bg0, bold = config.green, italic = config.italic.comments },
