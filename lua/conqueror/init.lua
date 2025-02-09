@@ -300,7 +300,7 @@ local function get_groups()
     DiagnosticOk = { link = "ConquerorGreenSign" },
     LspReferenceRead = { link = "ConquerorOcurrenceSelection" },
     LspReferenceText = { link = "ConquerorOcurrenceSelection" },
-    LspReferenceWrite = { link = "ConquerorYellowBold" },
+    LspReferenceWrite = { link = "ConquerorOcurrenceSelection" },
     LspCodeLens = { link = "ConquerorGray" },
     LspSignatureActiveParameter = { link = "Search" },
     gitcommitSelectedFile = { link = "ConquerorGreen" },
