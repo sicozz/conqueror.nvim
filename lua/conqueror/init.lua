@@ -139,6 +139,7 @@ local function get_groups()
   local groups = {
     -- definition
     ConquerorFg0 = { fg = colors.fg0 },
+    ConquerorFg0Bold = { fg = colors.f0, bold = config.bold },
     ConquerorFg1 = { fg = colors.fg1 },
     ConquerorFg2 = { fg = colors.fg2 },
     ConquerorFg3 = { fg = colors.fg3 },
@@ -246,9 +247,9 @@ local function get_groups()
     Operator = { fg = colors.fg4, italic = config.italic.operators },
     Keyword = { link = "ConquerorLightGray" },
     Identifier = { link = "ConquerorFg1" },
-    Function = { link = "ConquerorAquaBold" },
-    PreProc = { link = "ConquerorLightGray" },
-    Include = { link = "ConquerorLightGray" },
+    Function = { link = "ConquerorFg0Bold" },
+    PreProc = { link = "ConquerorRedBold" },
+    Include = { link = "ConquerorRedBold" },
     Define = { link = "ConquerorLightGray" },
     Macro = { link = "ConquerorLightGray" },
     PreCondit = { link = "ConquerorLightGray" },
