@@ -283,7 +283,7 @@ local function get_groups()
     DiagnosticWarn = { link = "ConquerorYellow" },
     DiagnosticSignWarn = { link = "ConquerorYellowSign" },
     DiagnosticUnderlineWarn = { link = "ConquerorYellowUnderline" },
-    DiagnosticInfo = { link = "ConquerorGreen" },
+    DiagnosticInfo = { link = "ConquerorYellow" },
     DiagnosticSignInfo = { link = "ConquerorBlueSign" },
     DiagnosticUnderlineInfo = { link = "ConquerorBlueUnderline" },
     DiagnosticHint = { link = "ConquerorAqua" },
