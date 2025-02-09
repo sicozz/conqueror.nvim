@@ -246,7 +246,7 @@ local function get_groups()
     Operator = { fg = colors.fg4, italic = config.italic.operators },
     Keyword = { link = "ConquerorLightGray" },
     Identifier = { link = "ConquerorFg1" },
-    Function = { link = "ConquerorRedBold" },
+    Function = { link = "ConquerorYellowBold" },
     PreProc = { link = "ConquerorLightGray" },
     Include = { link = "ConquerorLightGray" },
     Define = { link = "ConquerorLightGray" },
