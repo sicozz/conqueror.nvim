@@ -163,7 +163,7 @@ local function get_groups()
     ConquerorAqua = { fg = colors.aqua },
     ConquerorNeutralAqua = { fg = colors.neutral_aqua },
     ConquerorAquaBold = { fg = colors.aqua, bold = config.bold },
-    ConquerorOrange = { fg = colors.purple },
+    ConquerorOrange = { fg = colors.orange },
     ConquerorOrangeBold = { fg = colors.orange, bold = config.bold },
     ConquerorRedSign = config.transparent_mode and { fg = colors.red, reverse = config.invert_signs }
         or { fg = colors.red, bg = colors.bg0, reverse = config.invert_signs },
@@ -233,7 +233,7 @@ local function get_groups()
     vCursor = { link = "Cursor" },
     iCursor = { link = "Cursor" },
     lCursor = { link = "Cursor" },
-    Special = { link = "ConquerorOrange" },
+    Special = { fg = colors.purple },
     Comment = { fg = colors.gray, italic = config.italic.comments },
     Todo = { fg = colors.bg0, bg = colors.blue, bold = config.bold, italic = config.italic.comments },
     Done = { fg = colors.bg0, bold = config.green, italic = config.italic.comments },
