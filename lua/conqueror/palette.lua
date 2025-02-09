@@ -37,4 +37,5 @@ return {
   dark_aqua = "#002222",
   light_aqua = "#d2ffff",
   gray = "#a7a7a7",
+  light_gray = "#d4d4d4",
 }
