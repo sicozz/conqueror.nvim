@@ -249,7 +249,7 @@ local function get_groups()
     Identifier = { link = "ConquerorFg0" },
     Function = { link = "ConquerorFg1" },
     PreProc = { link = "ConquerorBlueBold" },
-    Include = { link = "ConquerorFg0Bold" },
+    Include = { link = "ConquerorBlueBold" },
     Define = { link = "ConquerorRedBold" },
     Macro = { link = "ConquerorRedBold" },
     PreCondit = { link = "ConquerorLightGray" },
