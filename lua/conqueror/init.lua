@@ -210,7 +210,7 @@ local function get_groups()
     VisualNOS = { link = "Visual" },
     Search = { fg = colors.fg0, bg = colors.bg0, reverse = config.inverse },
     IncSearch = { fg = colors.fg0, bg = colors.bg0, reverse = config.inverse },
-    CurSearch = { link = "IncSearch" },
+    CurSearch = { fg = colors.bg0, bg = colors.yellow, reverse = config.inverse },
     QuickFixLine = { link = "ConquerorPurple" },
     Underlined = { fg = colors.blue, underline = config.underline },
     StatusLine = { fg = colors.bg2, bg = colors.fg1, reverse = config.inverse },
