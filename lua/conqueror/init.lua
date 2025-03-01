@@ -245,7 +245,7 @@ local function get_groups()
     Label = { link = "ConquerorFg4" },
     Exception = { link = "ConquerorRed" },
     Operator = { fg = colors.fg4, italic = config.italic.operators },
-    Keyword = { link = "ConquerorBg4" },
+    Keyword = { link = "ConquerorFg4" },
     Identifier = { link = "ConquerorFg0" },
     Function = { link = "ConquerorFg1" },
     PreProc = { link = "ConquerorBlueBold" },
