@@ -32,7 +32,7 @@ return {
   accent_secondary = "#e6ff00", -- "Voltage" (warning, important)
   accent_tertiary = "#ff1a4f", -- "Neural Flare" (errors, critical)
   accent_quaternary = "#a359ff", -- "Quantum Shift" (special elements)
-  accent_quinary = "#0d56ff", -- "Hologram Blue" (info, links)
+  accent_quinary = "#bbffff", -- "Hologram Blue" (info, links)
 
   -- Standard semantic colors (bright variants)
   bright_red = "#ff4600", -- Bright red for errors
