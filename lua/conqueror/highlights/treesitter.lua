@@ -3,7 +3,7 @@ local M = {}
 ---@param colors KansoColors
 ---@param config? KansoConfig
 function M.setup(colors, config)
-    config = config or require("goprime").config
+    config = config or require("conqueror").config
     local theme = colors.theme
     return {
         -- @variable                       various variable names

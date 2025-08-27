@@ -2,12 +2,12 @@ local M = {}
 local PATH_SEP = vim.loop.os_uname().version:match("Windows") and "\\" or "/"
 
 local get_compiled_path = function(theme)
-    return table.concat({ vim.fn.stdpath("state"), "goprime", theme .. "_compiled.lua" }, PATH_SEP)
+    return table.concat({ vim.fn.stdpath("state"), "conqueror", theme .. "_compiled.lua" }, PATH_SEP)
 end
 
 ---@return string theme
 function M.get_theme_from_bg_opt()
-    local config = require("goprime").config
+    local config = require("conqueror").config
     return config.theme[vim.o.background] or config.theme.default
 end
 
@@ -15,7 +15,7 @@ end
 ---@param highlights table
 ---@param termcolors table
 function M.compile(theme, highlights, termcolors)
-    vim.loop.fs_mkdir(vim.fn.stdpath("state") .. PATH_SEP .. "goprime", 448)
+    vim.loop.fs_mkdir(vim.fn.stdpath("state") .. PATH_SEP .. "conqueror", 448)
 
     local fname = get_compiled_path(theme)
     local file, err = io.open(fname, "wb")
@@ -25,7 +25,7 @@ function M.compile(theme, highlights, termcolors)
     end
 
     local lines = {
-        "require'goprime'.compiled = string.dump(function()",
+        "require'conqueror'.compiled = string.dump(function()",
         "local g = vim.g",
         "local nvim_set_hl = vim.api.nvim_set_hl",
     }
@@ -42,7 +42,7 @@ function M.compile(theme, highlights, termcolors)
 
     local blob = table.concat(lines, "\n")
     assert(loadstring(blob, "=(compile)"))()
-    file:write(require("goprime").compiled)
+    file:write(require("conqueror").compiled)
     file:close()
 end
 

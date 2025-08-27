@@ -1,13 +1,13 @@
-# 🎯 GoPrime.nvim 🎯
+# 🎯 Conqueror.nvim 🎯
 
-A futuristic Neovim colorscheme featuring **GoPrime** and **GoUltra** themes, inspired by the strategic elegance of Go and modern digital aesthetics.
+A futuristic Neovim colorscheme featuring **Conqueror** and **GoUltra** themes, inspired by the strategic elegance of Go and modern digital aesthetics.
 
 ## ✨ Features
 
 - 🌈 Extensive support for `TreeSitter` syntax highlighting
 - 🔌 Compatible with popular plugins out of the box
 - ⚡ Compilation to lua byte code for fast startup times
-- 🎨 Two distinct theme variants: GoPrime (yellow-gold) and GoUltra (green-cyan)
+- 🎨 Two distinct theme variants: Conqueror (yellow-gold) and GoUltra (green-cyan)
 - 👁️ High contrast for excellent readability
 
 ## 📦 Installation
@@ -16,11 +16,11 @@ Download with your favorite package manager.
 
 ```lua
 -- Using Packer
-use "your-username/goprime.nvim"
+use "your-username/conqueror.nvim"
 
 -- Using Lazy
 {
-  "your-username/goprime.nvim",
+  "your-username/conqueror.nvim",
   lazy = false,
   priority = 1000,
 }
@@ -33,9 +33,9 @@ use "your-username/goprime.nvim"
 
 ## 🚀 Usage
 
-Load GoPrime theme:
+Load Conqueror theme:
 ```vim
-colorscheme goprime
+colorscheme conqueror
 ```
 
 Load GoUltra theme:
@@ -45,7 +45,7 @@ colorscheme goultra
 
 Or in Lua:
 ```lua
-vim.cmd("colorscheme goprime")
+vim.cmd("colorscheme conqueror")
 -- or
 vim.cmd("colorscheme goultra")
 ```
@@ -56,7 +56,7 @@ There is no need to call setup if you are ok with the defaults.
 
 ```lua
 -- Default options:
-require('goprime').setup({
+require('conqueror').setup({
     bold = true,                 -- enable bold fonts
     italics = true,             -- enable italics
     compile = false,             -- enable compiling the colorscheme
@@ -71,27 +71,27 @@ require('goprime').setup({
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
     colors = {                   -- add/modify theme and palette colors
         palette = {},
-        theme = { goprime = {}, goultra = {}, all = {} },
+        theme = { conqueror = {}, goultra = {}, all = {} },
     },
     overrides = function(colors) -- add/modify highlights
         return {}
     end,
-    theme = "goprime",          -- Load "goprime" theme by default
+    theme = "conqueror",          -- Load "conqueror" theme by default
     background = {               -- map the value of 'background' option to a theme
-        dark = "goprime",       -- try "goultra" !
-        light = "goprime"       -- only dark themes available
+        dark = "conqueror",       -- try "goultra" !
+        light = "conqueror"       -- only dark themes available
     },
 })
 
 -- setup must be called before loading
-vim.cmd("colorscheme goprime")
+vim.cmd("colorscheme conqueror")
 ```
 
 ## 🎨 Themes
 
-GoPrime comes in two beautiful variants:
+Conqueror comes in two beautiful variants:
 
-### 🟡 GoPrime 🟡
+### 🟡 Conqueror 🟡
 **Futuristic Go board aesthetic** - Pure black background with bright yellow accents reminiscent of digital Go stones and circuit traces. Perfect for focused coding sessions.
 
 ### 🟢 GoUltra 🟢
@@ -102,15 +102,15 @@ GoPrime comes in two beautiful variants:
 You can customize both theme and palette colors using `config.colors`:
 
 ```lua
-require('goprime').setup({
+require('conqueror').setup({
     colors = {
         palette = {
             -- Override specific palette colors
-            goprimeYellow = "#ffff00",  -- Change main yellow
+            conquerorYellow = "#ffff00",  -- Change main yellow
             goultraCyan = "#00ff88",    -- Change main cyan-green
         },
         theme = {
-            goprime = {
+            conqueror = {
                 syn = {
                     string = "#custom_color",
                 },

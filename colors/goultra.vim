@@ -1,1 +1,1 @@
-lua require('goprime').load('goultra')
+lua require('conqueror').load('goultra')

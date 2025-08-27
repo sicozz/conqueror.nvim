@@ -1,4 +1,4 @@
-local c = require("goprime.lib.color")
+local c = require("conqueror.lib.color")
 
 --TODO:
 --PreProc needs its own color
@@ -95,112 +95,112 @@ local c = require("goprime.lib.color")
 return {
     ---@param palette PaletteColors
     ---@return ThemeColors
-    goprime = function(palette)
+    conqueror = function(palette)
         return {
             ui = {
                 none = "NONE",
-                fg = palette.goprimeWhite,
-                fg_dim = palette.goprimeWhite1,
-                fg_reverse = palette.goprimeBlack,
+                fg = palette.conquerorWhite,
+                fg_dim = palette.conquerorWhite1,
+                fg_reverse = palette.conquerorBlack,
 
-                bg_dim = palette.goprimeBlack,
-                bg_m3 = palette.goprimeBlack,
-                bg_m2 = palette.goprimeBlack,
-                bg_m1 = palette.goprimeBlack,
-                bg = palette.goprimeBlack,
-                bg_p1 = palette.goprimeBlack1,
-                bg_p2 = palette.goprimeBlack2,
+                bg_dim = palette.conquerorBlack,
+                bg_m3 = palette.conquerorBlack,
+                bg_m2 = palette.conquerorBlack,
+                bg_m1 = palette.conquerorBlack,
+                bg = palette.conquerorBlack,
+                bg_p1 = palette.conquerorBlack1,
+                bg_p2 = palette.conquerorBlack2,
 
-                bg_gutter = palette.goprimeBlack1,
-                special = palette.goprimeYellow,
-                indent_line = palette.goprimeBlack3,
-                active_indent_line = palette.goprimeYellow3,
-                whitespace = palette.goprimeBlack3,
-                nontext = palette.goprimeWhite3,
+                bg_gutter = palette.conquerorBlack1,
+                special = palette.conquerorYellow,
+                indent_line = palette.conquerorBlack3,
+                active_indent_line = palette.conquerorYellow3,
+                whitespace = palette.conquerorBlack3,
+                nontext = palette.conquerorWhite3,
 
-                bg_visual = palette.goprimeBlack3,
-                bg_search = palette.goprimeYellow2,
+                bg_visual = palette.conquerorBlack3,
+                bg_search = palette.conquerorYellow2,
 
-                cursor_line_nr_foreground = palette.goprimeBlack4,
-                cursor_line_nr_active_foreground = palette.goprimeYellow,
-                cursor_bg = palette.goprimeYellow,
-                cursor_fg = palette.goprimeBlack,
+                cursor_line_nr_foreground = palette.conquerorBlack4,
+                cursor_line_nr_active_foreground = palette.conquerorYellow,
+                cursor_bg = palette.conquerorYellow,
+                cursor_fg = palette.conquerorBlack,
 
                 pmenu = {
-                    fg = palette.goprimeWhite,
-                    fg_sel = palette.goprimeBlack,
-                    bg = palette.goprimeBlack2,
-                    bg_sel = palette.goprimeYellow,
-                    bg_thumb = palette.goprimeBlack4,
-                    bg_sbar = palette.goprimeBlack1,
+                    fg = palette.conquerorWhite,
+                    fg_sel = palette.conquerorBlack,
+                    bg = palette.conquerorBlack2,
+                    bg_sel = palette.conquerorYellow,
+                    bg_thumb = palette.conquerorBlack4,
+                    bg_sbar = palette.conquerorBlack1,
                 },
 
                 float = {
-                    fg = palette.goprimeWhite,
-                    bg = palette.goprimeBlack1,
-                    fg_border = palette.goprimeYellow,
-                    bg_border = palette.goprimeBlack,
+                    fg = palette.conquerorWhite,
+                    bg = palette.conquerorBlack1,
+                    fg_border = palette.conquerorYellow,
+                    bg_border = palette.conquerorBlack,
                 },
             },
             syn = {
-                string = palette.goprimeYellow1,
-                variable = palette.goprimeWhite,
-                number = palette.goprimeYellow1,
-                constant = palette.goprimeYellow3,
-                identifier = palette.goprimeYellow1,
-                parameter = palette.goprimeWhite2,
-                fun = palette.goprimeWhite,
-                statement = palette.goprimeYellow3,
-                keyword = palette.goprimeYellow3,
-                operator = palette.goprimeYellow,
-                preproc = palette.goprimeWhite3,
-                type = palette.goprimeWhite1,
+                string = palette.conquerorYellow1,
+                variable = palette.conquerorWhite,
+                number = palette.conquerorYellow1,
+                constant = palette.conquerorYellow3,
+                identifier = palette.conquerorYellow1,
+                parameter = palette.conquerorWhite2,
+                fun = palette.conquerorWhite,
+                statement = palette.conquerorYellow3,
+                keyword = palette.conquerorYellow3,
+                operator = palette.conquerorYellow,
+                preproc = palette.conquerorWhite3,
+                type = palette.conquerorWhite1,
                 regex = palette.pearlCyan,
-                deprecated = palette.goprimeWhite4,
-                punct = palette.goprimeWhite3,
-                comment = palette.goprimeWhite4,
-                special1 = palette.goprimeYellow,
-                special2 = palette.goprimeYellow1,
-                special3 = palette.goprimeYellow2,
+                deprecated = palette.conquerorWhite4,
+                punct = palette.conquerorWhite3,
+                comment = palette.conquerorWhite4,
+                special1 = palette.conquerorYellow,
+                special2 = palette.conquerorYellow1,
+                special3 = palette.conquerorYellow2,
             },
             diag = {
-                error = palette.goprimeRed,
-                ok = palette.goprimeGreen,
-                warning = palette.goprimeOrange,
-                info = palette.goprimeYellow3,
-                hint = palette.goprimeYellow4,
+                error = palette.conquerorRed,
+                ok = palette.conquerorGreen,
+                warning = palette.conquerorOrange,
+                info = palette.conquerorYellow3,
+                hint = palette.conquerorYellow4,
             },
             diff = {
-                add = palette.goprimeYellow5,
-                delete = palette.goprimeYellow5,
-                change = palette.goprimeYellow5,
-                text = palette.goprimeYellow2,
+                add = palette.conquerorYellow5,
+                delete = palette.conquerorYellow5,
+                change = palette.conquerorYellow5,
+                text = palette.conquerorYellow2,
             },
             vcs = {
-                added = palette.goprimeGreen,
-                removed = palette.goprimeRed,
-                changed = palette.goprimeOrange,
-                untracked = palette.goprimeWhite3,
+                added = palette.conquerorGreen,
+                removed = palette.conquerorRed,
+                changed = palette.conquerorOrange,
+                untracked = palette.conquerorWhite3,
             },
             term = {
-                palette.goprimeBlack, -- black
-                palette.goprimeRed, -- red
-                palette.goprimeGreen, -- green
-                palette.goprimeYellow, -- yellow
-                palette.goprimeYellow3, -- blue (using yellow variant)
-                palette.goprimeYellow2, -- magenta (using yellow variant)
-                palette.goprimeYellow1, -- cyan (using yellow variant)
-                palette.goprimeWhite, -- white
-                palette.goprimeBlack4, -- bright black
-                palette.goprimeRed, -- bright red
-                palette.goprimeGreen, -- bright green
-                palette.goprimeYellow1, -- bright yellow
-                palette.goprimeYellow2, -- bright blue (using yellow variant)
-                palette.goprimeYellow3, -- bright magenta (using yellow variant)
-                palette.goprimeYellow4, -- bright cyan (using yellow variant)
-                palette.goprimeWhite1, -- bright white
-                palette.goprimeOrange, -- extended color 1
-                palette.goprimeYellow4, -- extended color 2
+                palette.conquerorBlack, -- black
+                palette.conquerorRed, -- red
+                palette.conquerorGreen, -- green
+                palette.conquerorYellow, -- yellow
+                palette.conquerorYellow3, -- blue (using yellow variant)
+                palette.conquerorYellow2, -- magenta (using yellow variant)
+                palette.conquerorYellow1, -- cyan (using yellow variant)
+                palette.conquerorWhite, -- white
+                palette.conquerorBlack4, -- bright black
+                palette.conquerorRed, -- bright red
+                palette.conquerorGreen, -- bright green
+                palette.conquerorYellow1, -- bright yellow
+                palette.conquerorYellow2, -- bright blue (using yellow variant)
+                palette.conquerorYellow3, -- bright magenta (using yellow variant)
+                palette.conquerorYellow4, -- bright cyan (using yellow variant)
+                palette.conquerorWhite1, -- bright white
+                palette.conquerorOrange, -- extended color 1
+                palette.conquerorYellow4, -- extended color 2
             },
         }
     end,

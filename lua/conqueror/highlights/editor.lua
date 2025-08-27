@@ -5,7 +5,7 @@ local M = {}
 ---@param config? KansoConfig
 function M.setup(colors, config)
     local theme = colors.theme
-    config = config or require("goprime").config
+    config = config or require("conqueror").config
 
     return {
         -- ColorColumn	Used for the columns set with 'colorcolumn'.
