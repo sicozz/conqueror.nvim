@@ -1,132 +1,134 @@
-# Conqueror.nvim
+# 🎯 GoPrime.nvim 🎯
 
-A cyberpunk-inspired Neovim color scheme with a monochromatic teal foundation and vibrant accent colors.
+A futuristic Neovim colorscheme featuring **GoPrime** and **GoUltra** themes, inspired by the strategic elegance of Go and modern digital aesthetics.
 
-![Conqueror.nvim Screenshot](assets/screenshot.png)
+## ✨ Features
 
-## Features
+- 🌈 Extensive support for `TreeSitter` syntax highlighting
+- 🔌 Compatible with popular plugins out of the box
+- ⚡ Compilation to lua byte code for fast startup times
+- 🎨 Two distinct theme variants: GoPrime (yellow-gold) and GoUltra (green-cyan)
+- 👁️ High contrast for excellent readability
 
-- 🌈 Cyberpunk aesthetic with a focus on readability
-- 🌙 Dark monochromatic teal base with carefully selected accent colors
-- 🔌 Plugin-specific highlighting for a cohesive experience
-- 🔄 True color terminal support
-- 🖥️ Transparent background option
-- Highly customizable with extensive configuration options
+## 📦 Installation
 
-## Installation
-
-### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
+Download with your favorite package manager.
 
 ```lua
-use {
-  "sicozz/conqueror.nvim",
-  config = function()
-    -- Optional: configure the color scheme
-    require("conqueror").setup({
-      -- your configuration options here
-    })
+-- Using Packer
+use "your-username/goprime.nvim"
 
-    -- Set the colorscheme
-    vim.cmd("colorscheme conqueror")
-  end
-}
-```
-
-### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
-
-```lua
+-- Using Lazy
 {
-  "sicozz/conqueror.nvim",
+  "your-username/goprime.nvim",
   lazy = false,
   priority = 1000,
-  opts = {
-    -- your configuration options here
-  },
-  config = function(_, opts)
-    require("conqueror").setup(opts)
-    vim.cmd("colorscheme conqueror")
-  end,
 }
 ```
 
-## Configuration
+## 📋 Requirements
 
-Conqueror.nvim comes with the following default settings:
+- Terminal with truecolor support
+- Terminal with undercurl support (optional)
+
+## 🚀 Usage
+
+Load GoPrime theme:
+```vim
+colorscheme goprime
+```
+
+Load GoUltra theme:
+```vim
+colorscheme goultra
+```
+
+Or in Lua:
+```lua
+vim.cmd("colorscheme goprime")
+-- or
+vim.cmd("colorscheme goultra")
+```
+
+## ⚙️ Configuration
+
+There is no need to call setup if you are ok with the defaults.
 
 ```lua
-{
-  terminal_colors = true,     -- Set terminal colors
-  undercurl = true,           -- Enable undercurl for diagnostics
-  underline = true,           -- Enable underline for certain highlights
-  bold = true,                -- Enable bold for certain highlights
-  italic = {
-    strings = true,           -- Italic strings
-    emphasis = true,          -- Italic for emphasis (markdown, etc.)
-    comments = true,          -- Italic comments
-    operators = false,        -- Italic operators
-    folds = true,             -- Italic folds
-  },
-  strikethrough = true,       -- Enable strikethrough for struck content
-  invert_selection = false,   -- Invert the visual selection
-  invert_signs = false,       -- Invert gutter signs
-  invert_tabline = false,     -- Invert the tabline highlights
-  invert_intend_guides = false, -- Invert indent guides
-  inverse = true,             -- Use inverse highlight for certain elements
-  transparent_mode = false,   -- Enable transparency
-  dim_inactive = false,       -- Dim inactive windows
+-- Default options:
+require('goprime').setup({
+    bold = true,                 -- enable bold fonts
+    italics = true,             -- enable italics
+    compile = false,             -- enable compiling the colorscheme
+    undercurl = true,            -- enable undercurls
+    commentStyle = { italic = true },
+    functionStyle = {},
+    keywordStyle = { italic = true},
+    statementStyle = {},
+    typeStyle = {},
+    transparent = false,         -- do not set background color
+    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
+    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
+    colors = {                   -- add/modify theme and palette colors
+        palette = {},
+        theme = { goprime = {}, goultra = {}, all = {} },
+    },
+    overrides = function(colors) -- add/modify highlights
+        return {}
+    end,
+    theme = "goprime",          -- Load "goprime" theme by default
+    background = {               -- map the value of 'background' option to a theme
+        dark = "goprime",       -- try "goultra" !
+        light = "goprime"       -- only dark themes available
+    },
+})
 
-  -- Override specific colors in the palette
-  palette_overrides = {
-    -- Example: Override the red color
-    -- accent_tertiary = "#ff0000",
-  },
-
-  -- Override specific highlight groups
-  overrides = {
-    -- Example: Make comments more visible
-    -- Comment = { fg = "#ffffff", italic = true },
-  },
-}
+-- setup must be called before loading
+vim.cmd("colorscheme goprime")
 ```
 
-## Color Palette
+## 🎨 Themes
 
-### Main Colors
+GoPrime comes in two beautiful variants:
 
-- **Base Background**: #00271e - "Deep Abyss" (dark teal background)
-- **Lighter Background**: #003a2e - "Circuit Void" (UI elements, panels)
-- **Selection Background**: #005a46 - "Neon Pulse" (selected text/items)
-- **Foreground Primary**: #b3f0d8 - "Terminal Glow" (main text color)
-- **Foreground Secondary**: #66d9b8 - "Data Stream" (secondary text)
+### 🟡 GoPrime 🟡
+**Futuristic Go board aesthetic** - Pure black background with bright yellow accents reminiscent of digital Go stones and circuit traces. Perfect for focused coding sessions.
 
-### Accent Colors
+### 🟢 GoUltra 🟢
+**Cyberpunk green variant** - Black background with vibrant green-cyan accents creating a high-tech, Matrix-inspired coding environment.
 
-- **Accent Primary**: #00ffb7 - "Cyberlink" (primary accent for highlights)
-- **Accent Secondary**: #e6ff00 - "Voltage" (warnings, important elements)
-- **Accent Tertiary**: #ff1a4f - "Neural Flare" (errors, critical elements)
-- **Accent Quaternary**: #a359ff - "Quantum Shift" (special elements)
-- **Accent Quinary**: #0d56ff - "Hologram Blue" (links, information)
+## 🧰 Customization
 
-## Plugin Support
+You can customize both theme and palette colors using `config.colors`:
 
-Conqueror.nvim provides enhanced highlighting for:
+```lua
+require('goprime').setup({
+    colors = {
+        palette = {
+            -- Override specific palette colors
+            goprimeYellow = "#ffff00",  -- Change main yellow
+            goultraCyan = "#00ff88",    -- Change main cyan-green
+        },
+        theme = {
+            goprime = {
+                syn = {
+                    string = "#custom_color",
+                },
+            },
+            all = {
+                ui = {
+                    cursor_line_nr_active_foreground = "#FFFFFF"
+                }
+            }
+        }
+    },
+})
+```
 
-- LSP & Diagnostics
-- Treesitter
-- NvimTree
-- Telescope
-- Git signs/diffs
-- nvim-cmp
-- Markdown
-- Which-key
-- and many more...
+## 💎 Inspiration
 
-## Contributing
-
-Contributions are welcome! Feel free to open issues or pull requests if you have suggestions, improvements, or bug fixes.
-
-## License
-
-Conqueror.nvim is released under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-This means you can use, modify, and distribute this color scheme freely, even in commercial projects. The only requirement is that you include the original copyright notice and license text.
+These themes are inspired by:
+- The strategic elegance of the ancient game of Go
+- Modern circuit board aesthetics  
+- Cyberpunk and futuristic digital interfaces
+- High contrast readability for long coding sessions
